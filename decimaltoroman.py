@@ -29,6 +29,10 @@ class TestDecimalToRoman(unittest.TestCase):
         resultado = decimal_to_roman(3)
         self.assertEqual(resultado, 'III')
 
+    def test_cuatro(self):
+        resultado = decimal_to_roman(4)
+        self.assertEqual(resultado, 'IV')        
+
     def test_cinco(self):
         resultado = decimal_to_roman(5)
         self.assertEqual(resultado, 'V')
@@ -36,6 +40,10 @@ class TestDecimalToRoman(unittest.TestCase):
     def test_diez(self):
         resultado = decimal_to_roman(10)
         self.assertEqual(resultado, 'X')
+
+    def test_catorce(self):
+        resultado = decimal_to_roman(14)
+        self.assertEqual(resultado, 'XIV')        
 
     def test_quince(self):
         resultado = decimal_to_roman(15)
@@ -61,7 +69,7 @@ class TestDecimalToRoman(unittest.TestCase):
         resultado = decimal_to_roman(100)
         self.assertEqual(resultado, 'C')
 
-    def test_novecientonoventaynueve(self):
+    def test_novecientosnoventaynueve(self):
         resultado = decimal_to_roman(999)
         self.assertEqual(resultado, 'CMXCIX')
 
