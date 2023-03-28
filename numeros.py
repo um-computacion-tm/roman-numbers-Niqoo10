@@ -34,7 +34,7 @@ class TestDecimalToRoman(unittest.TestCase):
         self.assertEqual(resultado, 'V')
     
     def test_diez(self):
-        resultado = decimal_to_roman(10)
+        resultado = decimal_to_roman(10
         self.assertEqual(resultado, 'X')
 
     def test_quince(self):
