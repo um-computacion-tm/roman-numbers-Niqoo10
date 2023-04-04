@@ -1,21 +1,8 @@
 import unittest
 
-#PARTE DE CODIGO
-def decimal_to_roman(num):
- 
-    c = [ "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" ]
-    x = [ "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" ]
-    i = [ "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" ]
-
-    centena = c[(num % 1000) // 100]
-    decena = x[(num % 100) // 10]
-    unidad = i[num % 10]
-
-    resultado = ( centena + decena + unidad)
-    return resultado
+from conversor import decimal_to_roman
 
 
-#PARTE DE TEST
 class TestDecimalToRoman(unittest.TestCase):
     def test_uno(self):
         resultado = decimal_to_roman(1)
@@ -73,7 +60,7 @@ class TestDecimalToRoman(unittest.TestCase):
         resultado = decimal_to_roman(999)
         self.assertEqual(resultado, 'CMXCIX')
 
-
 if __name__ == '__main__':
     unittest.main()
+
 
